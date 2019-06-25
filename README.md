@@ -9,8 +9,8 @@ The Database is the main source of truth for the UI and all the searches get ins
 MVVM Architecture that uses the Paging Library
 
 Extra points:
-  Allow for more than 25 results to be displayed
-  Error Handling
-  View Searches offlines of RECENT searches
+  <br>Allow for more than 25 results to be displayed
+  <br>Error Handling
+  <br>View Searches offlines of RECENT searches
 
 [![bleacherreport.png](https://i.postimg.cc/pXBtqvg0/bleacherreport.png)](https://postimg.cc/4mnMxD4t)
