@@ -5,16 +5,16 @@ import com.adson.android.flickrapp.models.FlickrPhoto
 import java.util.concurrent.Executor
 
 class FlickrLocalCache(
-    private val repoDao: FlickrDao,
+    private val flickrDao: FlickrDao,
     private val ioExecutor: Executor
 ) {
 
     /**
      * Insert a list of FlickrPhotos in the database, on a background thread.
      */
-    fun insert(repos: List<FlickrPhoto>, insertFinished: () -> Unit) {
+    fun insert(photos: List<FlickrPhoto>, insertFinished: () -> Unit) {
         ioExecutor.execute {
-            repoDao.insert(repos)
+            flickrDao.insert(photos)
             insertFinished()
         }
     }
@@ -26,6 +26,6 @@ class FlickrLocalCache(
     fun photosByQuery(query: String): DataSource.Factory<Int, FlickrPhoto> {
         // appending '%' so we can allow other characters to be before and after the query string
         val query = "%${query.replace(' ', '%')}%"
-        return repoDao.photosByQuery(query)
+        return flickrDao.photosByQuery(query)
     }
 }
