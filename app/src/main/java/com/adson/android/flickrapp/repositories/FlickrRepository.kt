@@ -18,7 +18,7 @@ class FlickrRepository (
     // LiveData of network errors.
     private val networkErrors = MutableLiveData<String>()
 
-    // avoid triggering multiple requests in the same time
+    // used to avoid triggering multiple requests at the same time
     private var isRequestInProgress = false
 
 

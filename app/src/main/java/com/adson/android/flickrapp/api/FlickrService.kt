@@ -69,7 +69,7 @@ fun searchFlickr(
                     val photos = response.body()?.photos?.photo ?: emptyList()
                     if(!photos.isEmpty()) {
                         for(item in photos) {
-                            item.querySearchStr = query //set all items
+                            item.querySearchStr = query //Associate photos to a specific queryTerms
                         }
                     }
                     onSuccess(photos)

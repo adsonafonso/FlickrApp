@@ -20,7 +20,7 @@ class FlickrLocalCache(
     }
 
     /**
-     * Request a LiveData<List<FlickrPhoto>> from the Dao, based on the query search.
+     * Return a DataSource.Factory from the DAO and handles the implementation of the DataSource for you.
      * @param query FlickrQuerySearch
      */
     fun photosByQuery(query: String): DataSource.Factory<Int, FlickrPhoto> {

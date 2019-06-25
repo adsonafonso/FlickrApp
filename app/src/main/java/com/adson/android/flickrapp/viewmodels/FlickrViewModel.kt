@@ -42,8 +42,5 @@ class FlickrViewModel(private val repository: FlickrRepository) : ViewModel() {
         }
     }
 
-    /**
-     * Get the last query value.
-     */
     fun lastQueryValue(): String? = queryLiveData.value
 }
